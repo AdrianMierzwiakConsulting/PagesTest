@@ -1,0 +1,431 @@
+<html lang="pl" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oh My Motorcycle | Wynajem Motocykli</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Subtelny pasek przewijania */
+        ::-webkit-scrollbar {
+            width: 0.5rem;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090b; /* zinc-950 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a; /* zinc-800 */
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f97316; /* orange-500 */
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-300 antialiased selection:bg-orange-500 selection:text-white">
+
+    <!-- Nawigacja -->
+    <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-zinc-950/70 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-white font-semibold text-xl tracking-tighter flex items-center gap-2">
+                <span class="bg-orange-500 text-black px-1.5 py-0.5 rounded-sm text-sm">OMM</span>
+                OH MY MOTORCYCLE
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
+                <a href="#o-nas" class="hover:text-white transition-colors">O nas</a>
+                <a href="#motocykle" class="hover:text-white transition-colors">Motocykle</a>
+                <a href="#dlaczego-my" class="hover:text-white transition-colors">Dlaczego my</a>
+                <a href="#cennik" class="hover:text-white transition-colors">Cennik</a>
+            </div>
+
+            <div class="hidden md:block">
+                <a href="#rezerwacja" class="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-black bg-white rounded-md hover:bg-zinc-200 transition-colors">
+                    Zarezerwuj
+                </a>
+            </div>
+
+            <!-- Mobile menu button (visual only for this static demo) -->
+            <button class="md:hidden text-zinc-400 hover:text-white">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="24" height="24"></iconify-icon>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
+        <!-- Tło -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&amp;w=2070&amp;auto=format&amp;fit=crop" alt="Motocyklista w nocy" class="w-full h-full object-cover opacity-50 mix-blend-luminosity">
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/50 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 w-full flex flex-col items-start mt-20">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 text-xs font-medium mb-6">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                </span>
+                Sezon w pełni – rezerwuj już dziś
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-semibold text-white tracking-tighter max-w-4xl leading-tight sm:leading-none">
+                MIASTO NALEŻY <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-300">DO CIEBIE.</span>
+            </h1>
+            
+            <p class="mt-6 text-lg md:text-xl text-zinc-400 max-w-xl font-medium leading-relaxed">
+                Nieważne, czy szukasz zwinnego skutera na dojazdy, czy mocnego nakeda na weekend. Wynajmij motocykl z rodziny <span class="text-zinc-200">Oh My Buddy</span> i poczuj prawdziwą energię.
+            </p>
+            
+            <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                <a href="#motocykle" class="inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium text-white bg-orange-600 rounded-md hover:bg-orange-500 transition-all shadow-[0_0_20px_rgba(249,115,22,0.3)]">
+                    Wybierz maszynę
+                </a>
+                <a href="#dlaczego-my" class="inline-flex items-center justify-center px-8 py-3.5 text-sm font-medium text-white bg-zinc-900 border border-white/10 rounded-md hover:bg-zinc-800 transition-colors">
+                    Dowiedz się więcej
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- O nas -->
+    <section id="o-nas" class="py-24 relative border-t border-white/5 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-semibold text-white tracking-tight mb-6">Napędza nas energia i ruch.</h2>
+                    <div class="space-y-6 text-zinc-400 text-base md:text-lg">
+                        <p>
+                            Oh My Motorcycle to projekt zrodzony z pasji do aktywności, wolności i miejskiego stylu życia. Jako część rodziny <strong>Oh My Buddy</strong>, wiemy, jak ważne jest bycie w ruchu i czerpanie z życia garściami.
+                        </p>
+                        <p>
+                            Nasza misja jest prosta: dostarczyć Ci niezawodne, świetnie utrzymane maszyny bez zbędnych formalności. Omijaj korki, zwiedzaj nowe trasy i ciesz się wiatrem we włosach. Twój czas, Twoja droga.
+                        </p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-orange-600 to-zinc-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" alt="Detal motocykla" class="relative rounded-2xl border border-white/10 object-cover aspect-video">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motocykle (Siatka) -->
+    <section id="motocykle" class="py-24 relative border-t border-white/5 bg-zinc-950/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 md:flex md:items-end md:justify-between">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-semibold text-white tracking-tight mb-4">Nasza flota</h2>
+                    <p class="text-zinc-400 text-lg max-w-2xl">Maszyny przygotowane na każdą okazję. Od zwinnych skuterów miejskich po motocykle dla wymagających.</p>
+                </div>
+                <a href="#cennik" class="hidden md:inline-flex items-center gap-2 text-orange-500 hover:text-orange-400 text-sm font-medium transition-colors">
+                    Zobacz pełny cennik <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Karta 1 -->
+                <div class="group flex flex-col bg-zinc-900/50 border border-white/5 rounded-2xl overflow-hidden hover:border-orange-500/30 transition-colors">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1502744688674-c619d1586c9e?q=80&amp;w=2070&amp;auto=format&amp;fit=crop" alt="Skuter miejski" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-zinc-950/80 backdrop-blur text-white text-xs font-medium px-2.5 py-1 rounded border border-white/10">Kategoria A1 / B</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-semibold text-white tracking-tight">Honda PCX 125</h3>
+                                <p class="text-sm text-zinc-500 mt-1">Skuter Miejski</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-xl font-semibold text-orange-500 tracking-tight">od 120 zł</span>
+                                <span class="text-xs text-zinc-500">/ doba</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 flex items-center gap-4 text-xs text-zinc-400 border-t border-white/5 pt-4">
+                            <span class="flex items-center gap-1"><iconify-icon icon="solar:gas-station-linear"></iconify-icon> 2.1L/100km</span>
+                            <span class="flex items-center gap-1"><iconify-icon icon="solar:settings-linear"></iconify-icon> Automatyczna</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Karta 2 -->
+                <div class="group flex flex-col bg-zinc-900/50 border border-white/5 rounded-2xl overflow-hidden hover:border-orange-500/30 transition-colors">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&amp;w=2070&amp;auto=format&amp;fit=crop" alt="Motocykl Naked" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-zinc-950/80 backdrop-blur text-white text-xs font-medium px-2.5 py-1 rounded border border-white/10">Kategoria A</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-semibold text-white tracking-tight">Yamaha MT-07</h3>
+                                <p class="text-sm text-zinc-500 mt-1">Naked Bike</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-xl font-semibold text-orange-500 tracking-tight">od 250 zł</span>
+                                <span class="text-xs text-zinc-500">/ doba</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 flex items-center gap-4 text-xs text-zinc-400 border-t border-white/5 pt-4">
+                            <span class="flex items-center gap-1"><iconify-icon icon="solar:gas-station-linear"></iconify-icon> 4.2L/100km</span>
+                            <span class="flex items-center gap-1"><iconify-icon icon="solar:settings-linear"></iconify-icon> Manualna</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Karta 3 -->
+                <div class="group flex flex-col bg-zinc-900/50 border border-white/5 rounded-2xl overflow-hidden hover:border-orange-500/30 transition-colors">
+                    <div class="aspect-[4/3] overflow-hidden relative">
+                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg" alt="Motocykl Classic" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-zinc-950/80 backdrop-blur text-white text-xs font-medium px-2.5 py-1 rounded border border-white/10">Kategoria A2 / A</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-semibold text-white tracking-tight">Honda Rebel 500</h3>
+                                <p class="text-sm text-zinc-500 mt-1">Cruiser</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-xl font-semibold text-orange-500 tracking-tight">od 220 zł</span>
+                                <span class="text-xs text-zinc-500">/ doba</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 flex items-center gap-4 text-xs text-zinc-400 border-t border-white/5 pt-4">
+                            <span class="flex items-center gap-1"><iconify-icon icon="solar:gas-station-linear"></iconify-icon> 3.7L/100km</span>
+                            <span class="flex items-center gap-1"><iconify-icon icon="solar:settings-linear"></iconify-icon> Manualna</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center md:hidden">
+                 <a href="#cennik" class="inline-flex items-center gap-2 text-orange-500 text-sm font-medium">
+                    Zobacz pełny cennik <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dlaczego my -->
+    <section id="dlaczego-my" class="py-24 border-t border-white/5 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-semibold text-white tracking-tight mb-4">Twój spokój na drodze</h2>
+                <p class="text-zinc-400 text-lg max-w-2xl mx-auto">Dbamy o detale, żebyś Ty mógł skupić się wyłącznie na przyjemności z jazdy.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-zinc-900/30 border border-white/5 p-8 rounded-2xl">
+                    <div class="w-12 h-12 bg-zinc-800 rounded-lg border border-white/10 flex items-center justify-center mb-6 text-orange-500">
+                        <iconify-icon icon="solar:shield-check-linear" width="24" height="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white tracking-tight mb-3">Pełne ubezpieczenie</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Każdy motocykl posiada pakiet OC/AC/NNW. W razie nieprzewidzianych sytuacji, jesteś w pełni chroniony.</p>
+                </div>
+
+                <div class="bg-zinc-900/30 border border-white/5 p-8 rounded-2xl">
+                    <div class="w-12 h-12 bg-zinc-800 rounded-lg border border-white/10 flex items-center justify-center mb-6 text-orange-500">
+                        <iconify-icon icon="solar:routing-2-linear" width="24" height="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white tracking-tight mb-3">Elastyczny wynajem</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Wynajmuj na godziny, dni lub tygodnie. Dostosowujemy się do Twoich planów, a nie odwrotnie.</p>
+                </div>
+
+                <div class="bg-zinc-900/30 border border-white/5 p-8 rounded-2xl">
+                    <div class="w-12 h-12 bg-zinc-800 rounded-lg border border-white/10 flex items-center justify-center mb-6 text-orange-500">
+                        <iconify-icon icon="solar:headphones-round-sound-linear" width="24" height="24"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-semibold text-white tracking-tight mb-3">Wsparcie 24/7</h3>
+                    <p class="text-sm text-zinc-400 leading-relaxed">Nasz zespół jest dostępny pod telefonem o każdej porze. Problem na trasie? Dzwonisz i załatwiamy sprawę.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cennik -->
+    <section id="cennik" class="py-24 border-t border-white/5 bg-zinc-950/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-semibold text-white tracking-tight mb-4">Przejrzyste pakiety</h2>
+                <p class="text-zinc-400 text-lg max-w-2xl mx-auto">Wybierz opcję, która najlepiej pasuje do Twojej trasy. Podane ceny są uśrednione (zależą od wybranego modelu).</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto items-center">
+                
+                <!-- Pakiet 1 -->
+                <div class="bg-zinc-900/50 border border-white/5 rounded-2xl p-8">
+                    <h3 class="text-lg font-medium text-white mb-2">Doba</h3>
+                    <p class="text-sm text-zinc-400 mb-6">Szybki wypad za miasto lub załatwienie spraw.</p>
+                    <div class="mb-8">
+                        <span class="text-4xl font-semibold text-white tracking-tighter">od 150</span>
+                        <span class="text-zinc-500 text-sm">PLN / dzień</span>
+                    </div>
+                    <ul class="space-y-4 text-sm text-zinc-300 mb-8">
+                        <li class="flex items-start gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 mt-0.5"></iconify-icon> Limit 200 km</li>
+                        <li class="flex items-start gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 mt-0.5"></iconify-icon> Pełne ubezpieczenie</li>
+                        <li class="flex items-start gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 mt-0.5"></iconify-icon> Jeden kask w cenie</li>
+                    </ul>
+                    <a href="#rezerwacja" class="block w-full py-2.5 px-4 rounded-md bg-white/5 hover:bg-white/10 text-white text-sm font-medium text-center border border-white/5 transition-colors">Wybierz</a>
+                </div>
+
+                <!-- Pakiet 2 (Wyróżniony) -->
+                <div class="bg-zinc-900 border border-orange-500/50 rounded-2xl p-8 relative shadow-[0_0_30px_rgba(249,115,22,0.1)] scale-100 md:scale-105 z-10">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <span class="bg-orange-500 text-white text-xs font-semibold px-3 py-1 rounded-full tracking-wide">NAJPOPULARNIEJSZY</span>
+                    </div>
+                    <h3 class="text-lg font-medium text-white mb-2">Weekend</h3>
+                    <p class="text-sm text-zinc-400 mb-6">Piątek popołudnie do poniedziałku rano.</p>
+                    <div class="mb-8">
+                        <span class="text-4xl font-semibold text-white tracking-tighter">od 400</span>
+                        <span class="text-zinc-500 text-sm">PLN / całość</span>
+                    </div>
+                    <ul class="space-y-4 text-sm text-zinc-300 mb-8">
+                        <li class="flex items-start gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-orange-500 mt-0.5"></iconify-icon> Limit 600 km</li>
+                        <li class="flex items-start gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-orange-500 mt-0.5"></iconify-icon> Pełne ubezpieczenie</li>
+                        <li class="flex items-start gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-orange-500 mt-0.5"></iconify-icon> Dwa kaski w cenie</li>
+                        <li class="flex items-start gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-orange-500 mt-0.5"></iconify-icon> Darmowy uchwyt na telefon</li>
+                    </ul>
+                    <a href="#rezerwacja" class="block w-full py-2.5 px-4 rounded-md bg-orange-600 hover:bg-orange-500 text-white text-sm font-medium text-center transition-colors">Wybierz</a>
+                </div>
+
+                <!-- Pakiet 3 -->
+                <div class="bg-zinc-900/50 border border-white/5 rounded-2xl p-8">
+                    <h3 class="text-lg font-medium text-white mb-2">Tydzień</h3>
+                    <p class="text-sm text-zinc-400 mb-6">Dla planujących dłuższą wyprawę objazdową.</p>
+                    <div class="mb-8">
+                        <span class="text-4xl font-semibold text-white tracking-tighter">od 950</span>
+                        <span class="text-zinc-500 text-sm">PLN / całość</span>
+                    </div>
+                    <ul class="space-y-4 text-sm text-zinc-300 mb-8">
+                        <li class="flex items-start gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 mt-0.5"></iconify-icon> Nielimitowane kilometry</li>
+                        <li class="flex items-start gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 mt-0.5"></iconify-icon> Pełne ubezpieczenie</li>
+                        <li class="flex items-start gap-3"><iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 mt-0.5"></iconify-icon> Zestaw kasków i akcesoriów</li>
+                    </ul>
+                    <a href="#rezerwacja" class="block w-full py-2.5 px-4 rounded-md bg-white/5 hover:bg-white/10 text-white text-sm font-medium text-center border border-white/5 transition-colors">Wybierz</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Rezerwacja / Kontakt -->
+    <section id="rezerwacja" class="py-24 border-t border-white/5 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16">
+                
+                <!-- Informacje kontaktowe -->
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-semibold text-white tracking-tight mb-6">Gotowy na start?</h2>
+                    <p class="text-zinc-400 text-base md:text-lg mb-10">Wypełnij formularz, a my odezwiemy się w ciągu 15 minut by potwierdzić dostępność i szczegóły wynajmu. Wolisz zadzwonić? Śmiało.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-zinc-900 rounded-full flex items-center justify-center border border-white/10 text-zinc-400">
+                                <iconify-icon icon="solar:phone-calling-linear"></iconify-icon>
+                            </div>
+                            <div>
+                                <p class="text-xs text-zinc-500 font-medium">Telefon</p>
+                                <p class="text-white font-medium tracking-tight">+48 500 600 700</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-zinc-900 rounded-full flex items-center justify-center border border-white/10 text-zinc-400">
+                                <iconify-icon icon="solar:letter-linear"></iconify-icon>
+                            </div>
+                            <div>
+                                <p class="text-xs text-zinc-500 font-medium">Email</p>
+                                <p class="text-white font-medium tracking-tight">ride@ohmymotorcycle.pl</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-zinc-900 rounded-full flex items-center justify-center border border-white/10 text-zinc-400">
+                                <iconify-icon icon="solar:map-point-linear"></iconify-icon>
+                            </div>
+                            <div>
+                                <p class="text-xs text-zinc-500 font-medium">Odbiór motocykli</p>
+                                <p class="text-white font-medium tracking-tight">ul. Przykładowa 12, Warszawa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formularz -->
+                <div class="bg-zinc-900/40 border border-white/5 rounded-2xl p-6 md:p-8">
+                    <form class="space-y-5" onsubmit="event.preventDefault();">
+                        <div class="grid grid-cols-2 gap-5">
+                            <div class="space-y-2">
+                                <label for="firstName" class="block text-xs font-medium text-zinc-400">Imię</label>
+                                <input type="text" id="firstName" class="w-full bg-zinc-950 border border-white/10 rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors" placeholder="Jan">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="phone" class="block text-xs font-medium text-zinc-400">Telefon</label>
+                                <input type="tel" id="phone" class="w-full bg-zinc-950 border border-white/10 rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors" placeholder="123 456 789">
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <label for="motorcycle" class="block text-xs font-medium text-zinc-400">Wybierz motocykl</label>
+                            <div class="relative">
+                                <select id="motorcycle" class="w-full appearance-none bg-zinc-950 border border-white/10 rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors">
+                                    <option value="" disabled="" selected="">Wybierz model...</option>
+                                    <option value="pcx">Honda PCX 125</option>
+                                    <option value="mt07">Yamaha MT-07</option>
+                                    <option value="rebel">Honda Rebel 500</option>
+                                    <option value="other">Inny (napiszę w uwagach)</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-zinc-400">
+                                    <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-5">
+                            <div class="space-y-2">
+                                <label for="dateFrom" class="block text-xs font-medium text-zinc-400">Data od</label>
+                                <input type="date" id="dateFrom" class="w-full bg-zinc-950 border border-white/10 rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors" style="color-scheme: dark;">
+                            </div>
+                            <div class="space-y-2">
+                                <label for="dateTo" class="block text-xs font-medium text-zinc-400">Data do</label>
+                                <input type="date" id="dateTo" class="w-full bg-zinc-950 border border-white/10 rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors" style="color-scheme: dark;">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="message" class="block text-xs font-medium text-zinc-400">Dodatkowe uwagi</label>
+                            <textarea id="message" rows="3" class="w-full bg-zinc-950 border border-white/10 rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors" placeholder="Np. potrzebuję dwóch kasków..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3 px-4 rounded-md bg-white text-black text-sm font-medium hover:bg-zinc-200 transition-colors mt-2">
+                            Wyślij zapytanie o dostępność
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 bg-zinc-950 py-8">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <span class="bg-zinc-800 text-zinc-400 px-1.5 py-0.5 rounded-sm text-xs font-semibold tracking-tighter">OMM</span>
+                <span class="text-sm text-zinc-500">© 2024 Oh My Motorcycle. Wszelkie prawa zastrzeżone.</span>
+            </div>
+            <div class="flex gap-6 text-sm text-zinc-500">
+                <a href="#" class="hover:text-white transition-colors">Regulamin</a>
+                <a href="#" class="hover:text-white transition-colors">Polityka prywatności</a>
+                <span class="text-zinc-700">|</span>
+                <span class="flex items-center gap-1">Część rodziny <strong class="text-zinc-400">Oh My Buddy</strong></span>
+            </div>
+        </div>
+    </footer>
+
+
+</body></html>
